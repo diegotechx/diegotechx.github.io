@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio</title>
+
+    <!-- Fuentes tipo Apple -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- i18next para traducción -->
+    <script src="https://unpkg.com/i18next@22.4.9/i18next.min.js"></script>
+    <script
+        src="https://unpkg.com/i18next-browser-languagedetector@6.1.5/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background-color: #111111;"
+        data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold me-5" href="#">Diego Rosas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-3 align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#about" data-i18n="nav.about">Sobre mí</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"
+                            data-i18n="nav.experience">Experiencia</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#courses" data-i18n="nav.courses">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education" data-i18n="nav.education">Formación</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contacto</a></li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button id="languageToggle" class="btn btn-link nav-link p-0 d-flex align-items-center"
+                            aria-label="Cambiar idioma" style="height: 40px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                                alt="Icono idioma" width="24" style="object-fit: contain;" />
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="position-relative text-center text-light py-7 hero-bg-image" style="margin-top: 56px;">
+        <div class="container position-relative pt-6 mt-6">
+            <h1 class="display-3 fw-bold" id="hero-title">Diego Rosas</h1>
+            <p class="lead mb-4" id="hero-subtitle" data-i18n="hero.subtitle">Desarrollador Java Full Stack Jr.</p>
+            <a href="#projects" class="btn btn-primary btn-lg" id="hero-btn" data-i18n="hero.button">Ver mis
+                proyectos</a>
+        </div>
+    </header>
+
+    <div style="height: 80px;"></div>
+
+    <!-- Sobre mí -->
+    <section id="about" class="container py-5 fade-in section-diff-1">
+        <h2 data-i18n="about.title">Sobre mí</h2>
+        <div class="row mt-4">
+            <div class="col-md-6 d-flex align-items-start gap-3">
+                <img src="https://img.icons8.com/ios-filled/50/009B4D/user.png" alt="Icono usuario" class="icon-lg" />
+                <p class="intro-text fs-5" data-i18n="about.text1"></p>
+            </div>
+            <div class="col-md-6 d-flex align-items-start gap-3">
+                <img src="https://img.icons8.com/ios-filled/50/009B4D/rocket.png" alt="Icono cohete" class="icon-lg" />
+                <p class="intro-text fs-5" data-i18n="about.text2"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section id="skills" class="container py-5 fade-in section-diff-2 text-center">
+        <h2 data-i18n="skills.title">Habilidades Técnicas</h2>
+        <div class="row mt-4 justify-content-center gap-4">
+            <!-- HTML -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                    class="skill-logo" />
+                <h6>HTML</h6>
+                <span class="skill-level intermedio" data-i18n="skills.levelIntermediate">Intermedio</span>
+            </div>
+            <!-- CSS -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                    class="skill-logo" />
+                <h6>CSS</h6>
+                <span class="skill-level intermedio" data-i18n="skills.levelIntermediate">Intermedio</span>
+            </div>
+            <!-- JavaScript -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" class="skill-logo" />
+                <h6>JavaScript</h6>
+                <span class="skill-level intermedio" data-i18n="skills.levelIntermediate">Intermedio</span>
+            </div>
+            <!-- Bootstrap -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    alt="Bootstrap" class="skill-logo bootstrap-logo" />
+                <h6>Bootstrap</h6>
+                <span class="skill-level intermedio" data-i18n="skills.levelIntermediate">Intermedio</span>
+            </div>
+            <!-- Java -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                    class="skill-logo" />
+                <h6>Java</h6>
+                <span class="skill-level principiante" data-i18n="skills.levelBeginner">Principiante</span>
+            </div>
+            <!-- Spring -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring"
+                    class="skill-logo" />
+                <h6>Spring</h6>
+                <span class="skill-level principiante" data-i18n="skills.levelBeginner">Principiante</span>
+            </div>
+            <!-- GitHub -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                    class="skill-logo invert-icon" />
+                <h6>GitHub</h6>
+                <span class="skill-level intermedio" data-i18n="skills.levelIntermediate">Intermedio</span>
+            </div>
+            <!-- Linux -->
+            <div class="skill-item col-6 col-md-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"
+                    class="skill-logo" />
+                <h6>Linux</h6>
+                <span class="skill-level intermedio" data-i18n="skills.levelIntermediate">Intermedio</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience" class="container py-5 fade-in section-diff-1 text-center">
+        <h2 data-i18n="experience.title">Experiencia</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5 data-i18n="experience.job1Title">Desarrollador Full Stack Jr. - Repairman</h5>
+                <span class="text-muted">Madrid | 2019 - 2021</span>
+                <ul data-i18n="experience.job1List"></ul>
+            </div>
+            <div class="timeline-item">
+                <h5 data-i18n="experience.job2Title">Diseñador Web - Mar &amp; Cocos Resort</h5>
+                <span class="text-muted">Madrid | 2016 - 2017</span>
+                <ul data-i18n="experience.job2List"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos -->
+    <section id="courses" class="container py-5 fade-in section-diff-3 text-center">
+        <h2 data-i18n="courses.title">Cursos</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5 course-card shadow-sm rounded p-4 d-flex flex-column">
+                <h5 class="text-center" data-i18n="courses.javaBasicTitle">Introducción a Java</h5>
+                <p data-i18n="courses.javaBasicDesc">(2025)</p>
+                <a href="https://www.fundaula.com/java" target="_blank" class="btn btn-primary mt-auto">Fundaula</a>
+            </div>
+            <div class="col-md-5 course-card shadow-sm rounded p-4 d-flex flex-column">
+                <h5 class="text-center" data-i18n="courses.iaTitle">IA para profesionistas</h5>
+                <p data-i18n="courses.iaDesc">(2024)</p>
+                <a href="https://bedu.org" target="_blank" class="btn btn-primary mt-auto">BEDU</a>
+            </div>
+            <div class="col-md-5 course-card shadow-sm rounded p-4 d-flex flex-column">
+                <h5 class="text-center" data-i18n="courses.frontEmdTitle">Front-end</h5>
+                <p data-i18n="courses.frontEmdDesc">(2024)</p>
+                <a href="https://www.alura.com.mx" target="_blank" class="btn btn-primary mt-auto">Alura</a>
+            </div>
+            <div class="col-md-5 course-card shadow-sm rounded p-4 d-flex flex-column">
+                <h5 class="text-center" data-i18n="courses.dataScienceTitle">Ciencia de Datos</h5>
+                <p data-i18n="courses.dataScienceDesc">(2023)</p>
+                <a href="https://bedu.org" target="_blank" class="btn btn-primary mt-auto">BEDU</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación Educativa -->
+    <section id="education" class="container py-5 fade-in section-diff-1 text-center">
+        <h2 data-i18n="education.title">Formación Educativa</h2>
+        <div class="row justify-content-center gap-4">
+            <div class="col-md-5 edu-card shadow-sm rounded p-4 d-flex align-items-center gap-3">
+                <img src="https://img.icons8.com/ios-filled/40/009B4D/graduation-cap.png" alt="Graduación" />
+                <div>
+                    <h5 data-i18n="education.degree1Title">Licenciatura en Administración Pública y Ciencia Política</h5>
+                    <p class="mb-0" data-i18n="education.degree1School">Universidad de Colima</p>
+                </div>
+            </div>
+            <div class="col-md-5 edu-card shadow-sm rounded p-4 d-flex align-items-center gap-3">
+                <img src="https://img.icons8.com/ios-filled/40/009B4D/school.png" alt="Escuela" />
+                <div>
+                    <h5 data-i18n="education.degree2Title">Bootcamp Desarrollador(a) Java FullStack Jr.</h5>
+                    <p class="mb-0" data-i18n="education.degree2School">Generation México</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="container py-5 fade-in section-diff-2 text-center">
+        <h2 data-i18n="projects.title">Proyectos Destacados</h2>
+
+        <div class="row g-4 justify-content-center" id="projects-list">
+            <div class="col-md-6 project-card" data-tech="java spring fullstack">
+                <div class="card shadow-sm h-100 d-flex flex-column">
+                    <img src="/img/repaiman.jpg" alt="Repairman" class="card-img-top project-img" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" data-i18n="projects.taskManagerTitle">Repairman</h5>
+                        <p class="card-text flex-grow-1" data-i18n="projects.taskManagerDesc"></p>
+                        <p><strong data-i18n="projects.technologiesLabel"></strong> Java, Spring Boot, MySQL, Bootstrap
+                        </p>
+                        <a href="https://github.com/alamdominic/repairman" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary mt-auto" data-i18n="projects.viewGitHub"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 project-card" data-tech="react fullstack">
+                <div class="card shadow-sm h-100 d-flex flex-column">
+                    <img src="/img/loading.gif" alt="Proyecto Pendiente"
+                        class="card-img-top project-img" />
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h5 class="card-title" data-i18n="projects.blogReactTitle">Proyecto Pendiente</h5>
+                        <p class="card-text flex-grow-1" data-i18n="projects.blogReactDesc"></p>
+                        <p><strong data-i18n="projects.technologiesLabel"></strong></p>
+                        <button class="btn btn-secondary mt-auto" disabled
+                            data-i18n="projects.comingSoonBtn">Próximamente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Idiomas -->
+    <section id="languages" class="container py-5 fade-in section-diff-2 text-center">
+        <h2 data-i18n="languages.title">Idiomas</h2>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <button class="btn btn-outline-light lang-select d-flex align-items-center gap-2" data-lang="es"
+                aria-pressed="true" aria-label="Seleccionar Español">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Español"
+                    width="32" style="object-fit: contain;" />
+                <div>
+                    <strong>Español</strong><br />
+                    <small data-i18n="languages.native">Nativo</small>
+                </div>
+            </button>
+            <button class="btn btn-outline-light lang-select d-flex align-items-center gap-2" data-lang="en"
+                aria-pressed="false" aria-label="Seleccionar Inglés">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"
+                    width="32" style="object-fit: contain;" />
+                <div>
+                    <strong>English</strong><br />
+                    <small data-i18n="languages.intermediate">Intermedio (B2)</small>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="container py-5 fade-in section-diff-1">
+        <h2 data-i18n="contact.title">Contacto</h2>
+        <p class="fs-5 mb-4 text-center" data-i18n="contact.subtitle"></p>
+        <div class="text-center mb-4">
+            <a href="https://linkedin.com/in/diegotechx" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-primary me-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                    alt="LinkedIn" width="24" /> LinkedIn
+            </a>
+            <a href="https://github.com/diegotechx" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-light">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                    width="24" style="filter: invert(1);" /> GitHub
+            </a>
+        </div>
+        <form id="contact-form" novalidate class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="name" class="form-label" data-i18n="contact.nameLabel"></label>
+                <input type="text" class="form-control" id="name" placeholder="" required />
+                <div class="invalid-feedback" data-i18n="contact.nameInvalid"></div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label" data-i18n="contact.emailLabel"></label>
+                <input type="email" class="form-control" id="email" placeholder="" required />
+                <div class="invalid-feedback" data-i18n="contact.emailInvalid"></div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label" data-i18n="contact.messageLabel"></label>
+                <textarea class="form-control" id="message" rows="5" placeholder="" required></textarea>
+                <div class="invalid-feedback" data-i18n="contact.messageInvalid"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg d-block mx-auto"
+                data-i18n="contact.sendButton"></button>
+            <div id="form-alert" class="mt-3 text-center"></div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Diego Rosas.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@22.4.9/i18next.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.5/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("pending"); // Pendiente
+        })();
+    </script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
